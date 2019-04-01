@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+<html>
+<head>
+
+</head>
+<style>
+	.title{
+		text-align: center;	
+	}
+	.grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 2em; <!-- medida proporcional a tela -->
+		align-items: center;
+		justify-items: center;	
+	}
+	.input input{
+		height: 50px;
+		width: 50px;
+		border-radius: 25%;
+		background-color: white;
+		
+	}
+	.output input{
+		height: 50px;
+		width: 50px;
+		border-radius: 25%;
+		
+	}
+	
+	@media (max-width: 600px){
+		.grid{
+			grid-template-columns: 1fr;
+			align-items: center;
+			justify-items: center;
+	
+		}
+		
+		
+	}
+	
+	
+</style>
+<body>
+
+	<h1 class="title">JavaScript Baskhara Calculator</h1>
+	<form onsubmkit="return false" class="grid input_data" id="form_input" name="entrada">
+		<section class="input">
+			<label>A</label>
+			<input type="number" value="0" id="entradaa"></input>
+		</section>
+		<section class="input">
+			<label>B</label>
+			<input type="number" value="0" id="entradab"></input>
+		</section>
+		<section class="input">
+			<label>C</label>
+			<input type="number" value="0" id="entradac"></input>			
+		</section>
+		<section></section>
+		<section class="button">			
+			<button type="submit" id="btn">Calcular</button>				
+		</section>		
+		<section></section>
+	</form>
+	<form class="grid" id="form_output" name="saida"> 
+		<section class="output">
+			<label>DELTA</label>
+			<input value="" id="delta" disabled></input>
+		</section>
+		<section class="output">
+			<label>X1</label>
+			<input  value="" id="x1" disabled></input>
+		</section>
+		<section class="output">
+			<label>X1</label>
+			<input  value="" id="x2" disabled></input>
+		</section>	
+	</form>
+	<script src="script.js"></script>
+</body>
+</html>
